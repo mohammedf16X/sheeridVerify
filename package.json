@@ -6,7 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "node --experimental-test-module-mocks --test",
-    "start": "node src/cli.js",
+    "build": "npm ci && npm run browser:install",
+    "start": "node bot.js",
     "web": "node src/web/server.js",
     "status": "node src/cli.js --status",
     "submit": "node src/cli.js --submit",
@@ -28,7 +29,9 @@
     "node": ">=22.15"
   },
   "dependencies": {
+    "axios": "^1.7.0",
     "camoufox": "^0.5.9",
+    "node-telegram-bot-api": "^0.66.0",
     "playwright-core": "^1.62.1",
     "proxy-chain": "^3.0.1",
     "undici": "^7.30.1"
